@@ -7,7 +7,13 @@ import Example from './components/Example'
 function App() {
 
   return (
-    <Menu />
+    <Router>
+      <Routes>
+        <Route path='/' element={<Menu />} />
+        <Route path='/Example' element={<Example />} />
+        <Route path='*' element={<p>404</p>} />
+      </Routes>
+    </Router>
   )
 }
 
