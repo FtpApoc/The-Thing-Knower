@@ -1,8 +1,12 @@
 #root {
   max-width: 1280px;
   margin: 0 auto;
-  padding: 2rem;
+  padding: 0;
   text-align: center;
+}
+/* Menu Component*/
+.Menu button {
+    margin : 1em;
 }
 
 .Content-Selection {
@@ -14,6 +18,22 @@
     margin-right: 30px;
 }
 
-.Menu button {
-    margin : 1em;
+/* Content Component */
+.Header {
+    background-color: #4c4c4c;
+    padding-inline: 0vmax;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding-inline: 33vw;
+}
+.Header h1{
+    display: inline-block;
+    margin-right: 30px;
+}
+.Header a{
+    text-decoration: none;
+}
+#QnA > *{
+    margin: 1vh;
 }

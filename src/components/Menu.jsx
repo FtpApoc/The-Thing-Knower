@@ -5,7 +5,7 @@ const Menu = () => {
 
     const startTrivia = () => {
         console.log("Trivia Start Button")
-        navigate("/Example")
+        navigate("/Content")
     }
 
     return(
