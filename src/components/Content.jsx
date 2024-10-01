@@ -1,10 +1,25 @@
 import { Link } from "react-router-dom";
-
-const submitAnswer = () => {
-    console.log("Submitted")
-}
+import { useState } from 'react';
 
 const Content = () => {
+    const [correct,setCorrect] = useState(null);
+    
+
+    const submitAnswer = () => {
+        
+    
+        const uAnswer = document.getElementById("testInput")
+        console.log(uAnswer.value)
+        
+        if (uAnswer.value == "2"){
+            setCorrect(true)
+        } else {
+            setCorrect(false)
+        }
+
+        console.log(correct)
+    }
+    
     return ( 
         <div className="content"> 
             <div className="Header">
@@ -16,13 +31,14 @@ const Content = () => {
                 <h1>What is 1+1?</h1>
             </div>
             <div className="answer-div">
-                <input /> 
-            <button onAction={submitAnswer}>
-                    Submit Answer    
-            </button>   
+                <input id="testInput"/> 
+                <button onClick={submitAnswer}>
+                        Submit Answer    
+                </button>   
                      
             </div>
-          
+            
+            {correct && <h2>That Is Correct!</h2>}
         </div>
  
         </div>

@@ -34,6 +34,9 @@
 .Header a{
     text-decoration: none;
 }
-#QnA > *{
+.QnA > *{
     margin: 1vh;
+}
+.answer-div > *{
+    margin-inline: 2vh;
 }
