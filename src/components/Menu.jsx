@@ -1,7 +1,11 @@
+import { useNavigate } from "react-router-dom"
+
 const Menu = () => {
+    const navigate = useNavigate();
 
     const startTrivia = () => {
         console.log("Trivia Start Button")
+        navigate("/Example")
     }
 
     return(
