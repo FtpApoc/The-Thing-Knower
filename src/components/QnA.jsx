@@ -1,24 +1,22 @@
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 // import Math from 'math';
 
 
-const QnA = () => {
+const QnA = ({a,b,ans}) => {
+    const navigate = useNavigate()
     const [correct,setCorrect] = useState(null);
 
-    const a = Math.floor(Math.random() * 10)
-    const b = Math.floor(Math.random() * 10)
-    const ans = a + b
-
-    const submitAnswer = (e) => {
-        e.preventDefault()
+    const submitAnswer = () => {
         const uAnswer = document.getElementById("testInput")
         
         if (uAnswer.value == String(ans)){
             setCorrect(true)
-            console.log("We Got Here! 18")
+            setTimeout(() => {navigate(0)},1000)
         } else {
             setCorrect(false)
         }
+        
     }
 
     
@@ -29,7 +27,7 @@ const QnA = () => {
             </div>
             <div className="answer-div">
                 <input id="testInput"/> 
-                <button onClick={(e) => {submitAnswer(e)}}>
+                <button onClick={submitAnswer}>
                         Submit Answer    
                 </button>   
                      

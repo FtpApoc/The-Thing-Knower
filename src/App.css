@@ -32,7 +32,9 @@
     margin-right: 30px;
 }
 .Header a{
+    color: #FFFFFF;
     text-decoration: none;
+    margin-left: 20vm;
 }
 .QnA > *{
     margin: 1vh;
