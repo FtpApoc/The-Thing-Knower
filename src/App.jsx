@@ -2,7 +2,7 @@ import {BrowserRouter as Router, Route, Routes} from 'react-router-dom'
 
 import './App.css'
 import Menu from './components/Menu'
-import Content from './components/Content'
+import Content from './components/content/Structure'
 
 function App() {
 

@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import QnA from "./QnA";
+import Visualiser from "./Visualiser";
 
 const Content = () => {   
     const aVal = Math.floor(Math.random() * 10)
@@ -12,7 +12,7 @@ const Content = () => {
                 <h1> The Thing Knower </h1>
                 <Link to={'/'}>Menu</Link>
             </div>
-        <QnA a={aVal} b={bVal} ans={ansVal}/>
+        <Visualiser a={aVal} b={bVal} ans={ansVal}/>
  
         </div>
      );
