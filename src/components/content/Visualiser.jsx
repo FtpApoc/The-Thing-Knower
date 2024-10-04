@@ -1,16 +1,15 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-// import Math from 'math';
 
 
-const QnA = ({a,b,ans}) => {
+const QnA = ({answer,question}) => {
     const navigate = useNavigate()
     const [correct,setCorrect] = useState(null);
 
     const submitAnswer = () => {
         const uAnswer = document.getElementById("testInput")
         
-        if (uAnswer.value == String(ans)){
+        if (uAnswer.value == String(answer)){
             setCorrect(true)
             setTimeout(() => {navigate(0)},1000)
         } else {
@@ -23,7 +22,7 @@ const QnA = ({a,b,ans}) => {
     return ( 
         <div className="QnA"> 
             <div className="question-div">
-                <h1>What is {a}+{b}?</h1>
+                <h1>{question}</h1>
             </div>
             <div className="answer-div">
                 <input id="testInput"/> 

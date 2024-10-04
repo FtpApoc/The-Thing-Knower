@@ -1,10 +1,9 @@
 import { Link } from "react-router-dom";
 import Visualiser from "./Visualiser";
+import SimpleMaths from "./SimpleMaths";
 
 const Content = () => {   
-    const aVal = Math.floor(Math.random() * 10)
-    const bVal = Math.floor(Math.random() * 10)
-    const ansVal = aVal + bVal
+    const {answer,question} = SimpleMaths()
  
     return ( 
         <div className="content"> 
@@ -12,7 +11,7 @@ const Content = () => {
                 <h1> The Thing Knower </h1>
                 <Link to={'/'}>Menu</Link>
             </div>
-        <Visualiser a={aVal} b={bVal} ans={ansVal}/>
+        <Visualiser answer={answer} question={question}/>
  
         </div>
      );
