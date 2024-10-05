@@ -2,8 +2,9 @@ import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
 
-const QnA = ({answer,question}) => {
+const QnA = ({answer,question,nextQuestion}) => {
     const navigate = useNavigate()
+    const [userAns,setUserAns] = useState("")
     const [correct,setCorrect] = useState(null);
 
     const submitAnswer = () => {
@@ -11,7 +12,12 @@ const QnA = ({answer,question}) => {
         
         if (uAnswer.value == String(answer)){
             setCorrect(true)
-            setTimeout(() => {navigate(0)},1000)
+            setTimeout(() => {
+                setCorrect(false);
+                setUserAns("");
+                nextQuestion();
+            },1200)
+            
         } else {
             setCorrect(false)
         }
@@ -25,7 +31,13 @@ const QnA = ({answer,question}) => {
                 <h1>{question}</h1>
             </div>
             <div className="answer-div">
-                <input id="testInput"/> 
+
+                <input 
+                id="testInput"
+                value={userAns} 
+                onChange={(e) => {setUserAns(e.target.value)}}
+                /> 
+
                 <button onClick={submitAnswer}>
                         Submit Answer    
                 </button>   

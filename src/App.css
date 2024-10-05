@@ -29,13 +29,17 @@
 }
 .Header h1{
     display: inline-block;
-    margin-right: 30px;
+    margin-inline: 10px;
 }
 .Header a{
+    display: inline-block;
     color: #FFFFFF;
     text-decoration: none;
-    margin-left: 20vm;
 }
+.Header p{
+    display: inline-block;
+}
+
 .QnA > *{
     margin: 1vh;
 }

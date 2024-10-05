@@ -30,12 +30,6 @@ const SimpleMaths = () => {
 
     const {answer,question} = functionList[fuctionNum](a,b)
 
-    console.log(`
-        A: ${a}
-        B: ${b}
-        answer: ${answer}
-        question: ${question}
-        `)
     return {answer,question};
 }
  
