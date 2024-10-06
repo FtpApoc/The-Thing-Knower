@@ -3,7 +3,6 @@ import { useNavigate } from 'react-router-dom';
 
 
 const QnA = ({answer,question,nextQuestion}) => {
-    const navigate = useNavigate()
     const [userAns,setUserAns] = useState("")
     const [correct,setCorrect] = useState(null);
 
