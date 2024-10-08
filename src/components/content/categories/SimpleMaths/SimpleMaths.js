@@ -1,3 +1,5 @@
+import { getRandomNumber } from '../../../Utilities';
+
 const SimpleMaths = () => {
     const a = Math.floor(Math.random() * 10)
     const b = Math.floor(Math.random() * 10)
@@ -26,7 +28,7 @@ const SimpleMaths = () => {
         multiplication
     ]
 
-    const fuctionNum = Math.floor(Math.random() * functionList.length)
+    const fuctionNum = getRandomNumber(functionList.length)
 
     const {answer,question} = functionList[fuctionNum](a,b)
 

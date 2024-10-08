@@ -1,5 +1,4 @@
 import { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
 
 
 const QnA = ({answer,question,nextQuestion}) => {
