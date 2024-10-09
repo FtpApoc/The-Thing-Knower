@@ -4,7 +4,7 @@ import { getRandomNumber } from '../../../Utilities';
 const CountryData = () => {
     const country = capitals[getRandomNumber(capitals.length)]
     
-    const question = (`What is the Capital of ${country["country"]}`)
+    const question = (`What is the Capital of ${country["country"]}?`)
     const answer = country["city"]
     
     console.log(answer)

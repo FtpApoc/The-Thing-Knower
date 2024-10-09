@@ -21,11 +21,10 @@
 /* Content Component */
 .Header {
     background-color: #4c4c4c;
-    padding-inline: 0vmax;
+    width: 100vw;
     position: fixed;
     top: 0;
     left: 0;
-    padding-inline: 33.33vw;
 }
 .Header h1{
     display: inline-block;

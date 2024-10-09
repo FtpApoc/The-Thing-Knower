@@ -15,8 +15,10 @@ const QnA = ({answer,question,nextQuestion}) => {
                 setUserAns("");
                 nextQuestion();
             },1200)
-            
-        } else {
+        } else if (uAnswer.value == "idk"){
+            setUserAns("");
+            nextQuestion();
+        } else{
             setCorrect(false)
         }
         
