@@ -28,9 +28,10 @@ const Content = () => {
         <div className="content"> 
             <div className="Header">
                 <Link to={'/'}>Menu</Link>
-                <h1> The Thing Knower </h1>
+                <h1>The Thing Knower</h1>
                 <p>{questionCount}</p>
             </div>
+        
         <Visualiser answer={answer} question={question} nextQuestion={nextQuestion}/>
  
         </div>
