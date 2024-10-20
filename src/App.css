@@ -6,7 +6,13 @@
 }
 /* Menu Component*/
 .Menu button {
-    margin : 1em;
+    font-size: 1.5vw;
+    margin : 1.5vw;
+    max-width: 15vw;
+}
+.Menu h1 {
+    margin-bottom: 1vw;
+    font-size: 4vw;
 }
 
 .Content-Selection {
@@ -14,21 +20,32 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: 2vw 1vw;
+    padding: 1vw 1vw 2vw 1vw;
     border-radius: 0.9vw;
+    max-width: 30vw;
+    margin: auto;
 }
+
+.Content-Selection h2 {
+    margin-top: 0vw;
+    font-size: 1.5vw;
+}
+
 .Content-Selection div{
-    border: 3px solid #202020;
+    background-color: #393939;
+    border: 1px solid transparent;
     border-radius: 5px;
     margin: 5px;
     display: flex;
     justify-content: space-between;
 }
+
 .Content-Selection p {
     display: inline-block;
     padding: 0.1vw;
     min-width: 50%;
     margin: 5px;
+    font-size: 1.25vw;
 }
 .Content-Selection input {
     min-width: 1.75vw;

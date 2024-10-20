@@ -11,8 +11,12 @@ const Menu = () => {
     return(
         <div className="Menu"> 
             <h1>The Thing Knower</h1>
+
+            <button onClick={startTrivia}> Begin Trivia </button>
             
             <div className="Content-Selection">
+                <h2>Category Selection</h2>
+
                 <div className="simple-maths">
                     <p>Simple Maths</p>
                     <input type="range" min={0} max={10} defaultValue={5}/>
@@ -24,7 +28,7 @@ const Menu = () => {
                 </div>
             </div>
             
-            <button onClick={startTrivia}> Begin </button>
+         
         </div>
     )
 }
