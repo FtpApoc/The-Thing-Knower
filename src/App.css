@@ -10,14 +10,29 @@
 }
 
 .Content-Selection {
-    background-color: #4c4c4c;
+    background-color: #474747;
     display: flex;
+    flex-direction: column;
     justify-content: center;
-    padding : 0.5vw;
+    padding: 2vw 1vw;
+    border-radius: 0.9vw;
+}
+.Content-Selection div{
+    border: 3px solid #202020;
+    border-radius: 5px;
+    margin: 5px;
+    display: flex;
+    justify-content: space-between;
 }
 .Content-Selection p {
     display: inline-block;
-    padding: 1vw;
+    padding: 0.1vw;
+    min-width: 50%;
+    margin: 5px;
+}
+.Content-Selection input {
+    min-width: 1.75vw;
+    margin-inline: 10%;
 }
 
 /* Content Component */

@@ -14,8 +14,13 @@ const Menu = () => {
             
             <div className="Content-Selection">
                 <div className="simple-maths">
-                <p>Simple Maths</p>
-                <p>Side By Side</p>
+                    <p>Simple Maths</p>
+                    <input type="range" min={0} max={10} defaultValue={5}/>
+                </div>
+
+                <div className="countryData">
+                    <p>Country Data</p>
+                    <input type="range" min={0} max={10} defaultValue={5}/>
                 </div>
             </div>
             
