@@ -1,9 +1,9 @@
-import { useState } from "react";
+
 import { useNavigate } from "react-router-dom"
+import Category from "./Category";
 
 const Menu = () => {
     const navigate = useNavigate();
-    const [value,setValue] = useState("5")
 
     return(
         <div className="Menu"> 
@@ -15,17 +15,7 @@ const Menu = () => {
                 <h2>Category Selection</h2>
                 
                 <div className="categories"> 
-                    <div className="simple-maths">
-                        <p>Simple Maths</p>
-                        <label htmlFor="testRange">{value}</label>
-
-                        <input id="testRange"
-                        type="range" 
-                        min={0} 
-                        max={9} 
-                        value={value}
-                        onChange={(e) => {setValue(e.target.value)}} />
-                    </div>
+                    <Category />
 
                     <div className="countryData">
                         <p>Country Data</p>
