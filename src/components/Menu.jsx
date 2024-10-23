@@ -11,28 +11,30 @@ const Menu = () => {
 
             <button onClick={() => {navigate("/content")}}> Begin Trivia </button>
             
-            <div className="Content-Selection">
+            <div className="Content-Box">
                 <h2>Category Selection</h2>
+                
+                <div className="categories"> 
+                    <div className="simple-maths">
+                        <p>Simple Maths</p>
+                        <label htmlFor="testRange">{value}</label>
 
-                <div className="simple-maths">
-                    <p>Simple Maths</p>
-                    <label htmlFor="testRange">{value}</label>
+                        <input id="testRange"
+                        type="range" 
+                        min={0} 
+                        max={9} 
+                        value={value}
+                        onChange={(e) => {setValue(e.target.value)}} />
+                    </div>
 
-                    <input id="testRange"
-                    type="range" 
-                    min={0} 
-                    max={10} 
-                    value={value}
-                    onChange={(e) => {setValue(e.target.value)}} />
-                </div>
-
-                <div className="countryData">
-                    <p>Country Data</p>
-                    <input type="range" min={0} max={10} defaultValue={5}/>
+                    <div className="countryData">
+                        <p>Country Data</p>
+                        <input type="range" min={0} max={9} defaultValue={5}/>
+                    </div>
+                    
+                    <button>+ Add New Category</button>
                 </div>
             </div>
-            
-         
         </div>
     )
 }

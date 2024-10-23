@@ -15,7 +15,7 @@
     font-size: 4vw;
 }
 
-.Content-Selection {
+.Content-Box {
     background-color: #474747;
     display: flex;
     flex-direction: column;
@@ -26,28 +26,38 @@
     margin: auto;
 }
 
-.Content-Selection h2 {
+.Content-Box h2 {
     margin-top: 0vw;
     font-size: 1.5vw;
 }
 
-.Content-Selection div{
+.categories > *{
     background-color: #393939;
     border: 1px solid transparent;
     border-radius: 5px;
     margin: 5px;
     display: flex;
     justify-content: space-between;
+    max-height: 30vw;
 }
 
-.Content-Selection p {
+.Content-Box button {
+    margin: 0px;
+    min-width: 98%;
+    max-width: 100%;
+    text-align: center;
+    display: inline-block;
+    font-size: 1.25vw;
+}
+
+.Content-Box p {
     display: inline-block;
     padding: 0.1vw;
     min-width: 50%;
     margin: 5px;
     font-size: 1.25vw;
 }
-.Content-Selection input {
+.Content-Box input {
     min-width: 1.75vw;
     margin-inline: 10%;
 }
