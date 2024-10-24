@@ -5,12 +5,14 @@ const QnA = ({answer,question,nextQuestion}) => {
     const [userAns,setUserAns] = useState("")
     const [correct,setCorrect] = useState(null);
 
-    const submitAnswer = () => {
+    const submitAnswer = (event) => {
+        event.preventDefault()
         const uAnswer = document.getElementById("testInput")
         
         if (uAnswer.value == String(answer)){
             setCorrect(true)
             setTimeout(() => {
+                handleCorrect();
                 setCorrect(false);
                 setUserAns("");
                 nextQuestion();
@@ -24,6 +26,14 @@ const QnA = ({answer,question,nextQuestion}) => {
         
     }
 
+    const handleCorrect = () => {
+        console.log("Correct")
+    }
+
+    const handleIncorrect = () => {
+        console.log("Incorrect")
+    }
+
     
     return ( 
         <div className="QnA"> 
@@ -31,17 +41,19 @@ const QnA = ({answer,question,nextQuestion}) => {
                 <h1>{question}</h1>
             </div>
             <div className="answer-div">
+                <form onSubmit={(e) => {submitAnswer(e)}}>
+                    <input 
+                    id="testInput"
+                    value={userAns} 
+                    onChange={(e) => {setUserAns(e.target.value)}}
+                    /> 
 
-                <input 
-                id="testInput"
-                value={userAns} 
-                onChange={(e) => {setUserAns(e.target.value)}}
-                /> 
-
-                <button onClick={submitAnswer}>
-                        Submit Answer    
-                </button>   
+                    <input type='submit' value={"Submit Answer"} />  
                      
+                </form>
+
+                <button onClick={handleIncorrect}>Show Answer</button>
+
             </div>
 
             {correct && <h2>That Is Correct!</h2>}

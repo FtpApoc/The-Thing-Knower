@@ -2,7 +2,7 @@
 .QnA > *{
     margin-top: 1vh;
 }
-.answer-div > *{
+.answer-div  *{
     margin-inline: 1.5vw;
 }
 .content h2{
@@ -31,7 +31,6 @@
 }
 
 .Header h1{
-    
     font-size: 3.5vw;
     flex-grow: 0.5;
 }
