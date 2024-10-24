@@ -25,16 +25,6 @@
     font-size: 1.5vw;
 }
 
-.categories > *{
-    background-color: #393939;
-    border: 1px solid transparent;
-    border-radius: 5px;
-    margin: 5px;
-    display: flex;
-    justify-content: space-between;
-    max-height: 30vw;
-}
-
 .Content-Box button {
     margin: 0px;
     min-width: 98%;
@@ -47,11 +37,39 @@
 .Content-Box p {
     display: inline-block;
     padding: 0.1vw;
-    min-width: 50%;
+    min-width: 37%;
     margin: 5px;
     font-size: 1.25vw;
+    align-self: center;
 }
 .Content-Box input {
     min-width: 1.75vw;
-    margin-inline: 10%;
+    margin-inline: 1vw;
+}
+
+.categories {
+    align-items: end;
+}
+
+.categories > *{
+    background-color: #393939;
+    border: 1px solid transparent;
+    border-radius: 5px;
+    margin: 5px;
+    display: flex;
+    justify-content: space-between;
+    max-height: 30vw;
+
+}
+.categories label {
+    display: inline;
+    padding: 0.1vw;
+    margin: 5px;
+    font-size: 1.25vw;
+    align-self: center
+}
+.icon {
+    display: inline;
+    margin: auto 0.5vw;
+    min-width: 2vw;
 }

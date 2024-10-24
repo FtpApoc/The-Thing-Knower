@@ -16,12 +16,9 @@ const Menu = () => {
                 <h2>Category Selection</h2>
                 
                 <div className="categories"> 
-                    <Category />
+                    <Category catName="simple-maths" displayName="Simple Maths"/>
 
-                    <div className="countryData">
-                        <p>Country Data</p>
-                        <input type="range" min={0} max={9} defaultValue={5}/>
-                    </div>
+                    <Category catName="countryData" displayName="Country Data"/>
                     
                     <button>+ Add New Category</button>
                 </div>
