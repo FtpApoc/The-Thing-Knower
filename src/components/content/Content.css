@@ -1,0 +1,40 @@
+/* Content Component */
+.QnA > *{
+    margin-top: 1vh;
+}
+.answer-div > *{
+    margin-inline: 1.5vw;
+}
+.content h2{
+    color: green;
+}
+
+/* Content Header */
+.Header {
+    background-color: #3A3A3A;
+    width: 100vw;
+    top: 0;
+    left: 0;
+    max-height: 7vw;
+    position: fixed;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.Header *{
+    display: inline;
+    min-width: 10vw;
+    color: #FFFFFF;
+    font-size: 2vw;
+    flex-grow: 0.05;
+}
+
+.Header h1{
+    
+    font-size: 3.5vw;
+    flex-grow: 0.5;
+}
+.Header a{
+    text-decoration: none;
+}

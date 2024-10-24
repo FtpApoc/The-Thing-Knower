@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { useState } from "react";
 import { getRandomNumber } from "../Utilities";
+import './Content.css'
 
 import Visualiser from "./Visualiser";
 import SimpleMaths from "./categories/SimpleMaths/SimpleMaths";
