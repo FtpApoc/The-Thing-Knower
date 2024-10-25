@@ -11,28 +11,35 @@ const QnA = ({answer,question,nextQuestion}) => {
         
         if (uAnswer.value == String(answer)){
             setCorrect(true)
-            setTimeout(() => {
-                handleCorrect();
-                setCorrect(false);
-                setUserAns("");
-                nextQuestion();
-            },1200)
+            handleResolved() // When I try and pass correct, it r
         } else if (uAnswer.value == "idk"){
             setUserAns("");
-            nextQuestion();
+            handleResolved(false)
         } else{
             setCorrect(false)
         }
         
     }
 
-    const handleCorrect = () => {
-        console.log("Correct")
+    const handleCorrect = () => {        
+        console.log("Correct") //This Is Never Activating 
     }
 
     const handleIncorrect = () => {
         console.log("Incorrect")
     }
+
+    const handleResolved = () => {
+        resolutionMessage = correct ? "Correct" : "Not"
+
+        setTimeout(() => {
+            setCorrect(false)
+            setUserAns("");
+            nextQuestion();
+        },1200)
+    }
+
+
 
     
     return ( 
@@ -52,11 +59,11 @@ const QnA = ({answer,question,nextQuestion}) => {
                      
                 </form>
 
-                <button onClick={handleIncorrect}>Show Answer</button>
+                <button onClick={handleResolved}>Show Answer</button>
 
             </div>
 
-            {correct && <h2>That Is Correct!</h2>}
+            {resolved && <h2>{resolutionMessage}</h2>}
         </div>
      );
 }
