@@ -11,10 +11,10 @@ const QnA = ({answer,question,nextQuestion}) => {
         
         if (uAnswer.value == String(answer)){
             setCorrect(true)
-            handleResolved() // When I try and pass correct, it r
+            handleResolved() 
         } else if (uAnswer.value == "idk"){
             setUserAns("");
-            handleResolved(false)
+            handleResolved()
         } else{
             setCorrect(false)
         }
@@ -30,7 +30,7 @@ const QnA = ({answer,question,nextQuestion}) => {
     }
 
     const handleResolved = () => {
-        resolutionMessage = correct ? "Correct" : "Not"
+        correct ? handleCorrect() : handleIncorrect()
 
         setTimeout(() => {
             setCorrect(false)
@@ -63,7 +63,7 @@ const QnA = ({answer,question,nextQuestion}) => {
 
             </div>
 
-            {resolved && <h2>{resolutionMessage}</h2>}
+            {correct && <h2>That Is Correct!</h2>}
         </div>
      );
 }
