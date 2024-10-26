@@ -1,12 +1,36 @@
 /* Content Component */
+.content{
+    display:flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
 .QnA > *{
     margin-top: 1vh;
 }
-.answer-div  *{
-    margin-inline: 1.5vw;
+.answer-div {
+    justify-self: center;
+    display: flex;
 }
-.content h2{
-    color: green;
+.answer-div button{
+    margin-inline: 1vw;
+}
+.answer-div form *{
+    margin-inline: 1vw;
+}
+.resMes{
+    align-self: flex-end
+}
+.answer-div input[type=submit] {
+    border-radius: 8px;
+    border: 1px solid transparent;
+    padding: 0.6em 1.2em;
+    font-size: 1em;
+    font-weight: 500;
+    font-family: inherit;
+    background-color: #1a1a1a;
+    cursor: pointer;
+    transition: border-color 0.25s;
 }
 
 /* Content Header */
@@ -37,3 +61,4 @@
 .Header a{
     text-decoration: none;
 }
+
