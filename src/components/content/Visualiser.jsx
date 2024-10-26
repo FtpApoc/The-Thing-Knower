@@ -35,11 +35,8 @@ const QnA = ({answer,question,nextQuestion}) => {
             setResolved(false)
             setUserAns("");
             nextQuestion();
-        },12000)
+        },12000) //Extra 0 here to give more time to poke around the CSS
     }
-
-
-
     
     return ( 
         <div className="content">
