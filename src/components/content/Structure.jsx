@@ -8,9 +8,10 @@ import SimpleMaths from "./categories/SimpleMaths/SimpleMaths";
 import CountryData from "./categories/CountryData/CountryData";
 
 
-const Content = () => {   
+const Content = () => {  
     const [questionCount, setQuestionCount] = useState(1)
 
+    //select and run a random listed category
     const categorySelection = () => {
         const categories = [CountryData,SimpleMaths]
 
@@ -19,8 +20,10 @@ const Content = () => {
         return category()
     }
 
+    //run selected category, Seperated from above for future expansion
     const {answer,question} = categorySelection()
 
+    //passed callback prop given to the visualiser component
     const nextQuestion = () => {
         setQuestionCount(questionCount + 1)  
     }

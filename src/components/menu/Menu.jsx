@@ -6,6 +6,8 @@ import Category from "./Category";
 const Menu = () => {
     const navigate = useNavigate();
 
+    //TODO: Make a Category selector
+
     return(
         <div className="Menu"> 
             <h1>The Thing Knower</h1>
@@ -16,6 +18,7 @@ const Menu = () => {
                 <h2>Category Selection</h2>
                 
                 <div className="categories"> 
+
                     <Category catName="simple-maths" displayName="Simple Maths"/>
 
                     <Category catName="countryData" displayName="Country Data"/>
