@@ -1,0 +1,75 @@
+/* Menu Component*/
+.Menu button {
+    font-size: 1.5vw;
+    margin : 1.5vw;
+    max-width: 15vw;
+}
+.Menu h1 {
+    margin-bottom: 1vw;
+    font-size: 4vw;
+}
+
+.Content-Box {
+    background-color: #474747;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 1vw 1vw 2vw 1vw;
+    border-radius: 0.9vw;
+    max-width: 30vw;
+    margin: auto;
+}
+
+.Content-Box h2 {
+    margin-top: 0vw;
+    font-size: 1.5vw;
+}
+
+.Content-Box button {
+    margin: 0px;
+    min-width: 98%;
+    max-width: 100%;
+    text-align: center;
+    display: inline-block;
+    font-size: 1.25vw;
+}
+
+.Content-Box p {
+    display: inline-block;
+    padding: 0.1vw;
+    min-width: 37%;
+    margin: 5px;
+    font-size: 1.25vw;
+    align-self: center;
+}
+.Content-Box input {
+    min-width: 1.75vw;
+    margin-inline: 1vw;
+}
+
+.categories {
+    align-items: end;
+}
+
+.categories > *{
+    background-color: #393939;
+    border: 1px solid transparent;
+    border-radius: 5px;
+    margin: 5px;
+    display: flex;
+    justify-content: space-between;
+    max-height: 30vw;
+
+}
+.categories label {
+    display: inline;
+    padding: 0.1vw;
+    margin: 5px;
+    font-size: 1.25vw;
+    align-self: center
+}
+.icon {
+    display: inline;
+    margin: auto 0.5vw;
+    min-width: 2vw;
+}
