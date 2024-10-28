@@ -1,4 +1,27 @@
 /* Content Component */
+#root{
+    display: flex;
+    justify-content: center;
+    place-content: center;
+    place-items: center;
+}
+.notHeader{
+    display: flex;
+    flex-direction: column;
+    place-items: center;
+    min-height:  20vw;
+    padding-top: 11vw;
+}
+.feedback{
+    display: relative;
+    top: 1px;
+    min-height: 1vw;
+}
+.QnA{
+    align-self: baseline;
+}
+
+
 .QnA > *{
     display: block;
 }
@@ -46,10 +69,7 @@
     transition: border-color 0.25s;
 }
 
-.feedback{
-    display: relative;
-    top: 10%;
-}
+
 
 /* Content Header */
 .Header {

@@ -35,7 +35,7 @@ const QnA = ({answer,question,nextQuestion}) => {
             setResolved(false)
             setUserAns("");
             nextQuestion();
-        },12000) // 6000 instead of 1200
+        },6000) // 6000 instead of 1200
     }
     
     return ( 
@@ -67,7 +67,7 @@ const QnA = ({answer,question,nextQuestion}) => {
                 </div>
                 
             </div>
-            {resolved && feedback}
+        {resolved && feedback}
         </div>
      );
 }
