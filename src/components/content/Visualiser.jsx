@@ -8,21 +8,24 @@ const QnA = ({answer,question,nextQuestion}) => {
     let correct = null
 
     const submitAnswer = (event) => {
+        //stop page reloads
         event.preventDefault()
-        const uAnswer = document.getElementById("testInput")
+        const uAnswer = document.getElementById("answerInput")
         
+        //check answerInput
         if (uAnswer.value == String(answer)){
             correct = true
-            handleResolved() 
+            feedbackAndNextQ() 
         } else if (uAnswer.value == "idk"){
-            handleResolved()
+            feedbackAndNextQ()
         } else {
             setResolved(false)
         }
         
     }
 
-    const handleResolved = () => {
+    //handle 
+    const feedbackAndNextQ = () => {
         setResolved(true)
         setFeedback(
             correct 
@@ -30,45 +33,43 @@ const QnA = ({answer,question,nextQuestion}) => {
             : <h2 className="feedback" style={{color:'red'}}>The Answer was {answer}</h2>
         )
         
-
+        //wait 1.2 seconds after feedback to set up next question
         setTimeout(() => {
             setResolved(false)
             setUserAns("");
             nextQuestion();
-        },6000) // 6000 instead of 1200
+        },1200)
     }
     
     return ( 
-        <div className="notHeader">
-            <div className="QnA"> 
-                <div className="question-div">
-                    <h1>{question}</h1>
-                </div>
-                <div className="answer-div">
+        <div className="QnA"> 
 
-                    <button onClick={handleResolved}>Show Answer</button>
+            <div className="question-div">
+                <h1>{question}</h1>
+            </div>
 
-                    <form onSubmit={(e) => {submitAnswer(e)}}>
-                        
+            <div className="answer-div">
 
-                        <input 
-                        type='text'
-                        id="testInput"
-                        autoComplete="off"
-                        
-                        value={userAns} 
-                        onChange={(e) => {setUserAns(e.target.value)}}
-                        /> 
+                <button onClick={feedbackAndNextQ}>Show Answer</button>
 
-                        <input type='submit' value={"Submit Answer"} />  
-                        
-                    </form>
+                <form onSubmit={(e) => {submitAnswer(e)}}>
                     
-                </div>
+                    <input 
+                    type='text'
+                    id="answerInput"
+                    autoComplete="off"
+                    value={userAns} 
+                    onChange={(e) => {setUserAns(e.target.value)}}
+                    /> 
+
+                    <input type='submit' value={"Submit Answer"} />  
+                    
+                </form>
                 
             </div>
-        {resolved && feedback}
+            {resolved && feedback}
         </div>
+        
      );
 }
  

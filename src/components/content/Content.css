@@ -5,29 +5,24 @@
     place-content: center;
     place-items: center;
 }
-.notHeader{
+.feedback{
+    display: relative;
+    top: 1px;
+    padding-top: 0.5vw;
+    min-height: 2vw;
+}
+.QnA{
     display: flex;
     flex-direction: column;
     place-items: center;
     min-height:  20vw;
-    padding-top: 11vw;
+    padding-top: 10vw;
 }
-.feedback{
-    display: relative;
-    top: 1px;
-    min-height: 1vw;
-}
-.QnA{
-    align-self: baseline;
-}
-
-
 .QnA > *{
     display: block;
-}
-.QnA > *{
     margin-top: 1vh;
 }
+
 .answer-div {
     justify-self: center;
     display: flex;
@@ -36,12 +31,11 @@
 .answer-div form {
     display:flex;
 }
+.answer-div form *{
+    margin-inline: 0.75vw;
+}
 .answer-div button{
     margin-inline: 1vw;
-}
-.answer-div form *{
-    margin-inline: 1vw;
-
 }
 .answer-div input[type=text] {
     margin: auto 1.25vw;
