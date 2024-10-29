@@ -1,7 +1,7 @@
 import { useState } from 'react';
 
 
-const QnA = ({answer,question,nextQuestion}) => {
+const QnA = ({question, answer, nextQuestion}) => {
     const [userAns,setUserAns] = useState("")
     const [resolved,setResolved] = useState(null);
     const [feedback, setFeedback] = useState(null);

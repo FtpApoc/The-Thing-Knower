@@ -5,21 +5,21 @@ const SimpleMaths = () => {
     const b = Math.floor(Math.random() * 10)
 
     const addition = (a,b) => {
-        const answer = (a + b);
         const question = (`What is ${a} + ${b}?`)
-        return {answer, question}
+        const answer = (a + b);
+        return {question, answer}
     }
 
     const multiplication = (a,b) => {
-        const answer = (a * b);
         const question = (`What is ${a} x ${b}?`)
-        return {answer, question}
+        const answer = (a * b);
+        return {question, answer}
     }
 
     const subtraction = (a,b) => {
-        const answer = (a - b);
         const question = (`What is ${a} - ${b}?`)
-        return {answer, question};
+        const answer = (a - b);
+        return {question, answer};
     }
 
     const functionList = [
@@ -30,9 +30,9 @@ const SimpleMaths = () => {
 
     const fuctionNum = getRandomNumber(functionList.length)
 
-    const {answer,question} = functionList[fuctionNum](a,b)
+    const {question, answer} = functionList[fuctionNum](a,b)
 
-    return {answer,question};
+    return {question, answer};
 }
  
 export default SimpleMaths;

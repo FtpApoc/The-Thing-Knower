@@ -6,6 +6,7 @@ import './Content.css'
 import Visualiser from "./Visualiser";
 import SimpleMaths from "./categories/SimpleMaths/SimpleMaths";
 import CountryData from "./categories/CountryData/CountryData";
+import Presidents from "./categories/Presidents";
 
 
 const Content = () => {  
@@ -13,7 +14,7 @@ const Content = () => {
 
     //select and run a random listed category
     const categorySelection = () => {
-        const categories = [CountryData,SimpleMaths]
+        const categories = [CountryData,SimpleMaths, Presidents]
 
         const category = categories[getRandomNumber(categories.length)]
 
@@ -21,7 +22,7 @@ const Content = () => {
     }
 
     //run selected category, Seperated from above for future expansion
-    const {answer,question} = categorySelection()
+    const {question, answer} = categorySelection()
 
     //passed callback prop given to the visualiser component
     const nextQuestion = () => {
@@ -36,7 +37,7 @@ const Content = () => {
                 <p>{questionCount}</p>
             </div>
         
-        <Visualiser answer={answer} question={question} nextQuestion={nextQuestion}/>
+        <Visualiser  question={question} answer={answer} nextQuestion={nextQuestion}/>
  
         </div>
      );
