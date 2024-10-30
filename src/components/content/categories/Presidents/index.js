@@ -1,9 +1,8 @@
 import presidents from './presidents.json'
-import { getRandomNumber, Ordinalise, pickRandomFromList } from '../../../Utilities';
-import { joinPaths } from '@remix-run/router';
+import { pickRandomFromList, Ordinalise } from '../../../Utilities';
 
 const Presidents = () => {
-    // const president = presidents[getRandomNumber(presidents.length)]
+    //TODO: remove need to specify ["choice"] here.
     const president = pickRandomFromList(presidents)["choice"]
 
     const question = (`Who was the ${Ordinalise(president["number"])} President of the USA?`)
