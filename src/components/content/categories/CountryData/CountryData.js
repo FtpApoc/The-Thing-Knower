@@ -8,8 +8,11 @@ const CountryData = () => {
 
     const answer = country["city"]
 
-    const alternate = []
+    //alternate option, making each option case insensitive
+    const alternate = [country["country"].toLowerCase()]
     
+    //TODO: Add Alternate Capitals (Bolivia / South Africa)
+
     return {  question, answer, alternate };
 }
  
