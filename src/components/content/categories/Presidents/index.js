@@ -8,8 +8,9 @@ const Presidents = () => {
     const question = (`Who was the ${Ordinalise(president["number"])} President of the USA?`)
 
     const answer = president["president"]
+    const alternate = president["alternate"]
 
-    return {question, answer};
+    return {question, answer, alternate};
 }
  
 export default Presidents;

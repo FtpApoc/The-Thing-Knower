@@ -32,7 +32,9 @@ const SimpleMaths = () => {
 
     const {question, answer} = functionList[fuctionNum](a,b)
 
-    return {question, answer};
+    const alternate = []
+
+    return {question, answer, alternate};
 }
  
 export default SimpleMaths;

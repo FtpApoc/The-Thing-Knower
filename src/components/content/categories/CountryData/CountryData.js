@@ -7,8 +7,10 @@ const CountryData = () => {
     const question = (`What is the Capital of ${country["country"]}?`)
 
     const answer = country["city"]
+
+    const alternate = []
     
-    return {  question, answer };
+    return {  question, answer, alternate };
 }
  
 export default CountryData;

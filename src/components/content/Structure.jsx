@@ -22,7 +22,7 @@ const Content = () => {
     }
 
     //run selected category, Seperated from above for future expansion
-    const {question, answer} = categorySelection()
+    const {question, answer, alternate} = categorySelection()
 
     //passed callback prop given to the visualiser component
     const nextQuestion = () => {
@@ -37,7 +37,7 @@ const Content = () => {
                 <p>{questionCount}</p>
             </div>
         
-        <Visualiser  question={question} answer={answer} nextQuestion={nextQuestion}/>
+        <Visualiser  question={question} answer={answer} alternate={alternate} nextQuestion={nextQuestion}/>
  
         </div>
      );
