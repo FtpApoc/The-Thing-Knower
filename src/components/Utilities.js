@@ -11,5 +11,5 @@ export function Ordinalise(n){
 
 export function pickRandomFromList(list){
     const choice = list[getRandomNumber(list.length)]
-    return {choice}
+    return choice
 }
