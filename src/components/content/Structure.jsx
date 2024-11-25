@@ -7,6 +7,7 @@ import Visualiser from "./Visualiser";
 import SimpleMaths from "./categories/SimpleMaths/SimpleMaths";
 import CountryData from "./categories/CountryData/CountryData";
 import Presidents from "./categories/Presidents";
+import PrimeMinisters from "./categories/PrimeMinisters";
 
 
 const Content = () => {  
@@ -14,7 +15,11 @@ const Content = () => {
 
     //select and run a random listed category
     const categorySelection = () => {
-        const categories = [CountryData,SimpleMaths, Presidents]
+        const categories = [
+            // CountryData,
+            // SimpleMaths, 
+            // Presidents,
+            PrimeMinisters]
 
         const category = categories[getRandomNumber(categories.length)]
 
