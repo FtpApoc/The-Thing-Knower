@@ -5,12 +5,29 @@ import { pickRandomFromList } from '../../../Utilities';
 const PrimeMinisters = () => {
     const pm = pickRandomFromList(primeMinisters)
     
-    const fullName = `${pm["GivenName"]} ${pm["Surname"]}` 
+    const getFullName = () => {
+        if (pm["Optional"] === ""){
+            return `${pm["GivenName"]} ${pm["Surname"]}`
+        } else {
+             return `${pm["GivenName"]} ${pm["Surname"]}, ${pm["Optional"]}` 
+        }
+    }  
 
-    const {question, answer, alternate} = Leader.number(
-        pm["PMID"], //number 
+    const fullName = getFullName()
+    
+
+    // const {question, answer, alternate} = Leader.number(
+    //     pm["PMID"], //number 
+    //     "Prime Minister", //type
+    //     fullName, //answer
+    //     pm["Surname"] //alternates
+    // )
+
+    const {question, answer, alternate} = Leader.dates(
         "Prime Minister", //type
-        fullName, //answer
+        pm["YearStart"], //dateStart
+        pm["YearEnd"], //dateEnd
+        fullName, //Leadername (answer)
         pm["Surname"] //alternates
     )
 

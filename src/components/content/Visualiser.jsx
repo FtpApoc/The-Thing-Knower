@@ -40,7 +40,7 @@ const QnA = ({question, answer, alternate, nextQuestion}) => {
             setResolved(false)
             setUserAns("");
             nextQuestion();
-        },1200)
+        },2000)
     }
     
     return ( 
