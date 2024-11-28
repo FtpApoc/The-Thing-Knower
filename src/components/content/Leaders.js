@@ -1,20 +1,15 @@
 import { Ordinalise } from '../Utilities';
 
-export function number(leaderNum,leaderType,leaderName,alternates){
+export function number(leaderNum,leaderType){
 
     const question = (`Who was the ${Ordinalise(leaderNum)} ${leaderType}?`)
 
-    const answer = leaderName
-    const alternate = alternates
-
-    return {question, answer, alternate};
+    return {question};
 }
 
-export function dates(leaderType,dateStart,dateEnd,leaderName,alternates){
+export function dates(leaderType,dateStart,dateEnd){
    const question = (`Which ${leaderType} was in office between ${dateStart}-${dateEnd}?`)
 
-   const answer = leaderName
-   const alternate = alternates
 
-   return {question, answer, alternate};
+   return {question};
 }

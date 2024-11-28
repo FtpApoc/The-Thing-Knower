@@ -18,23 +18,18 @@ const PrimeMinisters = () => {
             "Prime Minister", //type
             pm["YearStart"], //dateStart
             pm["YearEnd"], //dateEnd
-            fullName, //Leadername (answer)
-            pm["Surname"] //alternates
         )
 
-        return {question}
+        return question
     }
-
 
     const number = () => {
         const {question} = Leader.number(
                 pm["PMID"], //number 
                 "Prime Minister", //type
-                fullName, //answer
-                pm["Surname"] //alternates
         )
 
-        return {question}
+        return question
     }
 
     const functionList = [
@@ -44,11 +39,10 @@ const PrimeMinisters = () => {
         //successor
     ]
 
-    const {question} = pickRandomFromList(functionList)()
-
+    const question = pickRandomFromList(functionList)()
     const answer = fullName //answer
     const alternate = pm["Surname"] //alternates
-    
+
     return {question, answer, alternate};
 }
  
