@@ -13,21 +13,42 @@ const PrimeMinisters = () => {
         }
     })() 
     
-    // const {question, answer, alternate} = Leader.number(
-    //     pm["PMID"], //number 
-    //     "Prime Minister", //type
-    //     fullName, //answer
-    //     pm["Surname"] //alternates
-    // )
+    const dates = () => { 
+        const {question} = Leader.dates(
+            "Prime Minister", //type
+            pm["YearStart"], //dateStart
+            pm["YearEnd"], //dateEnd
+            fullName, //Leadername (answer)
+            pm["Surname"] //alternates
+        )
 
-    const {question, answer, alternate} = Leader.dates(
-        "Prime Minister", //type
-        pm["YearStart"], //dateStart
-        pm["YearEnd"], //dateEnd
-        fullName, //Leadername (answer)
-        pm["Surname"] //alternates
-    )
+        return {question}
+    }
 
+
+    const number = () => {
+        const {question} = Leader.number(
+                pm["PMID"], //number 
+                "Prime Minister", //type
+                fullName, //answer
+                pm["Surname"] //alternates
+        )
+
+        return {question}
+    }
+
+    const functionList = [
+        number,
+        dates//,
+        //predecessor,
+        //successor
+    ]
+
+    const {question} = pickRandomFromList(functionList)()
+
+    const answer = fullName //answer
+    const alternate = pm["Surname"] //alternates
+    
     return {question, answer, alternate};
 }
  

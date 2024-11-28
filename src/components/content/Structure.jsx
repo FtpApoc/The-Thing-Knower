@@ -18,7 +18,7 @@ const Content = () => {
         const categories = [
             // CountryData,
             // SimpleMaths, 
-            Presidents,
+            // Presidents,
             PrimeMinisters]
 
         const category = categories[getRandomNumber(categories.length)]
