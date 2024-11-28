@@ -4,14 +4,25 @@ import { pickRandomFromList } from '../../../Utilities';
 
 const PrimeMinisters = () => {
     const pm = pickRandomFromList(primeMinisters)
-    
-    const fullName = (() => {
+
+    const getFullName = (pm) => {
         if (pm["Optional"] === ""){
             return `${pm["GivenName"]} ${pm["Surname"]}`
         } else {
              return `${pm["GivenName"]} ${pm["Surname"]}, ${pm["Optional"]}` 
         }
-    })() 
+    }
+
+    const getOccurrance = (pm) => {
+        if (pm["Occurance"] != "only"){
+            const name = getFullName(pm)
+            return `${name} (${pm["Occurance"]})`
+        } else {
+            return getFullName(pm)
+        }
+    }
+
+    const fullName = getFullName(pm) 
     
     const dates = () => { 
         const {question} = Leader.dates(
@@ -32,11 +43,34 @@ const PrimeMinisters = () => {
         return question
     }
 
+    const predecessor = () => {
+        const prePM = primeMinisters[`${pm["PMID"]}`]
+
+        const {question} = Leader.predecessor(
+            "Prime Minister", //type
+            getOccurrance(prePM)
+        )
+
+        return question;
+    }
+
+
+    const successor = () => {
+        const sucPM = primeMinisters[`${pm["PMID"]-2}`]
+
+        const {question} = Leader.successor(
+            "Prime Minister", //type
+            getOccurrance(sucPM)
+        )
+
+        return question;
+    }
+
     const functionList = [
         number,
-        dates//,
-        //predecessor,
-        //successor
+        dates,
+        predecessor,
+        successor
     ]
 
     const question = pickRandomFromList(functionList)()

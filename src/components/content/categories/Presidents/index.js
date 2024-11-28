@@ -24,11 +24,34 @@ const Presidents = () => {
         return question;
     }
 
+    const predecessor = () => {
+        const prePres = presidents[`${president["number"]}`]
+
+        const {question} = Leader.predecessor(
+            "US President", //type
+            prePres["president"]
+        )
+
+        return question;
+    }
+
+
+    const successor = () => {
+        const sucPres = presidents[`${president["number"]-2}`]
+
+        const {question} = Leader.successor(
+            "US President", //type
+            sucPres["president"]
+        )
+
+        return question;
+    }
+
     const functionList = [
         number,
-        dates//,
-        //predecessor,
-        //successor
+        dates,
+        predecessor,
+        successor
     ]
 
     const question = pickRandomFromList(functionList)()

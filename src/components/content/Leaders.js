@@ -13,3 +13,15 @@ export function dates(leaderType,dateStart,dateEnd){
 
    return {question};
 }
+
+export function predecessor(leaderType,name){
+    const question = (`Which ${leaderType} precedes ${name}?`)
+
+    return {question};
+}
+
+export function successor(leaderType,name){
+    const question = (`Which ${leaderType} succeeds ${name}?`)
+
+    return {question};
+}

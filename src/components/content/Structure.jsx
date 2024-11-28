@@ -16,7 +16,7 @@ const Content = () => {
     //select and run a random listed category
     const categorySelection = () => {
         const categories = [
-            // CountryData,
+            CountryData,
             // SimpleMaths, 
             Presidents,
             PrimeMinisters]
