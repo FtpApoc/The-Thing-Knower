@@ -5,21 +5,35 @@ import { pickRandomFromList } from '../../../Utilities';
 const Presidents = () => {
     const president = pickRandomFromList(presidents)
 
-    const {question, answer, alternate} = Leader.dates(
-        "US President", //type
-        president["took_office"], //dateStart
-        president["left_office"], //dateEnd
-        president["president"], //leaderName (answer)
-        president["alternate"] //alternates
-    )
+    const dates = () => {
+        const {question} = Leader.dates(
+            "US President", //type
+            president["took_office"], //dateStart
+            president["left_office"], //dateEnd
+        )
 
+        return question;
+    }
 
-    // const {question, answer, alternate} = Leader.number(
-    //     president["number"], //number
-    //     "President of the USA", //type
-    //     president["president"], //answer
-    //     president["alternate"] //alternates
-    // )
+    const number = () => {
+        const {question} = Leader.number(
+            president["number"], //number
+            "President of the USA", //type
+        )
+
+        return question;
+    }
+
+    const functionList = [
+        number,
+        dates//,
+        //predecessor,
+        //successor
+    ]
+
+    const question = pickRandomFromList(functionList)()
+    const answer = president["president"] //leaderName (answer)
+    const alternate = president["alternate"] //alternates
 
     return {question, answer, alternate};
 }
