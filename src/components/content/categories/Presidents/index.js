@@ -5,14 +5,23 @@ import { pickRandomFromList } from '../../../Utilities';
 const Presidents = () => {
     const president = pickRandomFromList(presidents)
 
+    const nameRes = () => { 
+        const answer = president["president"] //leaderName (answer)
+        const alternate = president["alternate"] //alternates
+        
+        return {answer,alternate}
+    }
+
     const dates = () => {
         const {question} = Leader.dates(
             "US President", //type
             president["took_office"], //dateStart
             president["left_office"], //dateEnd
         )
+        
+        const {answer,alternate} = nameRes(); 
 
-        return question;
+        return {question, answer, alternate};
     }
 
     const number = () => {
@@ -21,7 +30,9 @@ const Presidents = () => {
             "President of the USA", //type
         )
 
-        return question;
+        const {answer,alternate} = nameRes(); 
+
+        return {question, answer, alternate};
     }
 
     const predecessor = () => {
@@ -32,7 +43,9 @@ const Presidents = () => {
             prePres["president"]
         )
 
-        return question;
+        const {answer,alternate} = nameRes(); 
+
+        return {question, answer, alternate};
     }
 
 
@@ -44,20 +57,31 @@ const Presidents = () => {
             sucPres["president"]
         )
 
-        return question;
+        const {answer,alternate} = nameRes(); 
+
+        return {question, answer, alternate};
+    }
+
+    const party = () => {
+        const {question} = Leader.party(president["president"])
+
+        
+        const answer = president["party"]
+        const alternate = []
+
+        return {question,answer,alternate};
     }
 
     const functionList = [
         number,
         dates,
         predecessor,
-        successor
+        successor,
+        party
     ]
 
-    const question = pickRandomFromList(functionList)()
-    const answer = president["president"] //leaderName (answer)
-    const alternate = president["alternate"] //alternates
-
+    const {question, answer, alternate} = pickRandomFromList(functionList)()
+    
     return {question, answer, alternate};
 }
  

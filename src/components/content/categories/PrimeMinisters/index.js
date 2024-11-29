@@ -22,6 +22,14 @@ const PrimeMinisters = () => {
         }
     }
 
+    const nameRes = () => { 
+        const answer = fullName //answer
+        const alternate = pm["Surname"] //alternates    
+        
+        return {answer,alternate}
+    }
+
+
     const fullName = getFullName(pm) 
     
     const dates = () => { 
@@ -31,7 +39,9 @@ const PrimeMinisters = () => {
             pm["YearEnd"], //dateEnd
         )
 
-        return question
+        const {answer,alternate} = nameRes(); 
+
+        return {question, answer, alternate};
     }
 
     const number = () => {
@@ -40,7 +50,9 @@ const PrimeMinisters = () => {
                 "Prime Minister", //type
         )
 
-        return question
+        const {answer,alternate} = nameRes(); 
+
+        return {question, answer, alternate};
     }
 
     const predecessor = () => {
@@ -51,7 +63,9 @@ const PrimeMinisters = () => {
             getOccurrance(prePM)
         )
 
-        return question;
+        const {answer,alternate} = nameRes(); 
+
+        return {question, answer, alternate};
     }
 
 
@@ -63,19 +77,30 @@ const PrimeMinisters = () => {
             getOccurrance(sucPM)
         )
 
-        return question;
+        const {answer,alternate} = nameRes(); 
+
+        return {question, answer, alternate};
+    }
+
+    const party = () => {
+        const {question} = Leader.party(fullName)
+
+        
+        const answer = pm["PoliticalParty"]
+        const alternate = []
+
+        return {question,answer,alternate};
     }
 
     const functionList = [
         number,
         dates,
         predecessor,
-        successor
+        successor,
+        party
     ]
 
-    const question = pickRandomFromList(functionList)()
-    const answer = fullName //answer
-    const alternate = pm["Surname"] //alternates
+    const {question, answer, alternate} = pickRandomFromList(functionList)()
 
     return {question, answer, alternate};
 }

@@ -25,3 +25,9 @@ export function successor(leaderType,name){
 
     return {question};
 }
+
+export function party(name){
+    const question = `Which political party did ${name} belong to?`
+
+    return {question};
+}
