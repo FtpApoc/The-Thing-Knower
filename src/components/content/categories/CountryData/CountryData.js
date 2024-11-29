@@ -5,11 +5,15 @@ const CountryData = () => {
     const country = capitals[getRandomNumber(capitals.length)]
     
     const question = (`What is the Capital of ${country["country"]}?`)
+
     const answer = country["city"]
+
+    //alternate option, making each option case insensitive
+    const alternate = [country["country"].toLowerCase()]
     
-    console.log(answer)
-    
-    return { answer, question };
+    //TODO: Add Alternate Capitals (Bolivia / South Africa)
+
+    return {  question, answer, alternate };
 }
  
 export default CountryData;

@@ -1,0 +1,462 @@
+[
+    {
+      "number": 1,
+      "president": "George Washington",
+      "alternate": ["GW","washington"],
+      "birth_year": 1732,
+      "death_year": 1799,
+      "took_office": 1789,
+      "left_office": 1797,
+      "party": "No Party"
+    },
+    {
+      "number": 2,
+      "president": "John Adams",
+      "alternate": ["JA","adams"],
+      "birth_year": 1735,
+      "death_year": 1826,
+      "took_office": 1797,
+      "left_office": 1801,
+      "party": "Federalist"
+    },
+    {
+      "number": 3,
+      "president": "Thomas Jefferson",
+      "alternate": ["TJ","jefferson"],
+      "birth_year": 1743,
+      "death_year": 1826,
+      "took_office": 1801,
+      "left_office": 1809,
+      "party": "Democratic-Republican"
+    },
+    {
+      "number": 4,
+      "president": "James Madison",
+      "alternate": ["JMa","madison"],
+      "birth_year": 1751,
+      "death_year": 1836,
+      "took_office": 1809,
+      "left_office": 1817,
+      "party": "Democratic-Republican"
+    },
+    {
+      "number": 5,
+      "president": "James Monroe",
+      "alternate": ["JMo","monroe"],
+      "birth_year": 1758,
+      "death_year": 1831,
+      "took_office": 1817,
+      "left_office": 1825,
+      "party": "Democratic-Republican"
+    },
+    {
+      "number": 6,
+      "president": "John Quincy Adams",
+      "alternate": ["JQA","quincy adams","quincy"],
+      "birth_year": 1767,
+      "death_year": 1848,
+      "took_office": 1825,
+      "left_office": 1829,
+      "party": "Democratic-Republican"
+    },
+    {
+      "number": 7,
+      "president": "Andrew Jackson",
+      "alternate": ["AJa","jackson"],
+      "birth_year": 1767,
+      "death_year": 1845,
+      "took_office": 1829,
+      "left_office": 1837,
+      "party": "Democratic"
+    },
+    {
+      "number": 8,
+      "president": "Martin Van Buren",
+      "alternate": ["MVB","van buren"],
+      "birth_year": 1782,
+      "death_year": 1862,
+      "took_office": 1837,
+      "left_office": 1841,
+      "party": "Democratic"
+    },
+    {
+      "number": 9,
+      "president": "William Henry Harrison",
+      "alternate": ["WHH","harrison","henry harrison"],
+      "birth_year": 1773,
+      "death_year": 1841,
+      "took_office": 1841,
+      "left_office": 1841,
+      "party": "Whig"
+    },
+    {
+      "number": 10,
+      "president": "John Tyler",
+      "alternate": ["JT","tyler"],
+      "birth_year": 1790,
+      "death_year": 1862,
+      "took_office": 1841,
+      "left_office": 1845,
+      "party": "Whig"
+    },
+    {
+      "number": 11,
+      "president": "James K. Polk",
+      "alternate": ["JP","JKP","james polk","polk"],
+      "birth_year": 1795,
+      "death_year": 1849,
+      "took_office": 1845,
+      "left_office": 1849,
+      "party": "Democratic"
+    },
+    {
+      "number": 12,
+      "president": "Zachary Taylor",
+      "alternate": ["ZT","taylor"],
+      "birth_year": 1784,
+      "death_year": 1850,
+      "took_office": 1849,
+      "left_office": 1850,
+      "party": "Whig"
+    },
+    {
+      "number": 13,
+      "president": "Millard Fillmore",
+      "alternate": ["MF","fillmore"],
+      "birth_year": 1800,
+      "death_year": 1874,
+      "took_office": 1850,
+      "left_office": 1853,
+      "party": "Whig"
+    },
+    {
+      "number": 14,
+      "president": "Franklin Pierce",
+      "alternate": ["FP","pierce"],
+      "birth_year": 1804,
+      "death_year": 1869,
+      "took_office": 1853,
+      "left_office": 1857,
+      "party": "Democratic"
+    },
+    {
+      "number": 15,
+      "president": "James Buchanan",
+      "alternate": ["JBu","buchanan"],
+      "birth_year": 1791,
+      "death_year": 1868,
+      "took_office": 1857,
+      "left_office": 1861,
+      "party": "Democratic"
+    },
+    {
+      "number": 16,
+      "president": "Abraham Lincoln",
+      "alternate": ["AL","lincoln"],
+      "birth_year": 1809,
+      "death_year": 1865,
+      "took_office": 1861,
+      "left_office": 1865,
+      "party": "Republican"
+    },
+    {
+      "number": 17,
+      "president": "Andrew Johnson",
+      "alternate": ["AJo","johnson"],
+      "birth_year": 1808,
+      "death_year": 1875,
+      "took_office": 1865,
+      "left_office": 1869,
+      "party": "Democratic"
+    },
+    {
+      "number": 18,
+      "president": "Ulysses S. Grant",
+      "alternate": ["UG","USG","grant"],
+      "birth_year": 1822,
+      "death_year": 1885,
+      "took_office": 1869,
+      "left_office": 1877,
+      "party": "Republican"
+    },
+    {
+      "number": 19,
+      "president": "Rutherford B. Hayes",
+      "alternate": ["RBH","RH","hayes"],
+      "birth_year": 1822,
+      "death_year": 1893,
+      "took_office": 1877,
+      "left_office": 1881,
+      "party": "Republican"
+    },
+    {
+      "number": 20,
+      "president": "James A. Garfield",
+      "alternate": ["JAG","JG","garfield"],
+      "birth_year": 1831,
+      "death_year": 1881,
+      "took_office": 1881,
+      "left_office": 1881,
+      "party": "Republican"
+    },
+    {
+      "number": 21,
+      "president": "Chester A. Arthur",
+      "alternate": ["CAA","CA","arthur"],
+      "birth_year": 1829,
+      "death_year": 1886,
+      "took_office": 1881,
+      "left_office": 1885,
+      "party": "Republican"
+    },
+    {
+      "number": 22,
+      "president": "Grover Cleveland",
+      "alternate": ["GC","cleveland"],
+      "birth_year": 1837,
+      "death_year": 1908,
+      "took_office": 1885,
+      "left_office": 1889,
+      "party": "Democratic"
+    },
+    {
+      "number": 23,
+      "president": "Benjamin Harrison",
+      "alternate": ["BH","harrison"],
+      "birth_year": 1833,
+      "death_year": 1901,
+      "took_office": 1889,
+      "left_office": 1893,
+      "party": "Republican"
+    },
+    {
+      "number": 24,
+      "president": "Grover Cleveland",
+      "alternate": ["GC","cleveland"],
+      "birth_year": 1837,
+      "death_year": 1908,
+      "took_office": 1893,
+      "left_office": 1897,
+      "party": "Democratic"
+    },
+    {
+      "number": 25,
+      "president": "William McKinley",
+      "alternate": ["WM","mckinley"],
+      "birth_year": 1843,
+      "death_year": 1901,
+      "took_office": 1897,
+      "left_office": 1901,
+      "party": "Republican"
+    },
+    {
+      "number": 26,
+      "president": "Theodore Roosevelt",
+      "alternate": ["TR","teddy","t roosevelt"],
+      "birth_year": 1858,
+      "death_year": 1919,
+      "took_office": 1901,
+      "left_office": 1909,
+      "party": "Republican"
+    },
+    {
+      "number": 27,
+      "president": "William Howard Taft",
+      "alternate": ["WHT","WT","taft"],
+      "birth_year": 1857,
+      "death_year": 1930,
+      "took_office": 1909,
+      "left_office": 1913,
+      "party": "Republican"
+    },
+    {
+      "number": 28,
+      "president": "Woodrow Wilson",
+      "alternate": ["WW","wilson"],
+      "birth_year": 1856,
+      "death_year": 1924,
+      "took_office": 1913,
+      "left_office": 1921,
+      "party": "Democratic"
+    },
+    {
+      "number": 29,
+      "president": "Warren G. Harding",
+      "alternate": ["WGH","WH","harding"],
+      "birth_year": 1865,
+      "death_year": 1923,
+      "took_office": 1921,
+      "left_office": 1923,
+      "party": "Republican"
+    },
+    {
+      "number": 30,
+      "president": "Calvin Coolidge",
+      "alternate": ["CC","coolidge"],
+      "birth_year": 1872,
+      "death_year": 1933,
+      "took_office": 1923,
+      "left_office": 1929,
+      "party": "Republican"
+    },
+    {
+      "number": 31,
+      "president": "Herbert Hoover",
+      "alternate": ["HH","hoover"],
+      "birth_year": 1874,
+      "death_year": 1964,
+      "took_office": 1929,
+      "left_office": 1933,
+      "party": "Republican"
+    },
+    {
+      "number": 32,
+      "president": "Franklin D. Roosevelt",
+      "alternate": ["FDR","FR","delano","f roosevelt"],
+      "birth_year": 1882,
+      "death_year": 1945,
+      "took_office": 1933,
+      "left_office": 1945,
+      "party": "Democratic"
+    },
+    {
+      "number": 33,
+      "president": "Harry S. Truman",
+      "alternate": ["HST","HT","truman"],
+      "birth_year": 1884,
+      "death_year": 1972,
+      "took_office": 1945,
+      "left_office": 1953,
+      "party": "Democratic"
+    },
+    {
+      "number": 34,
+      "president": "Dwight D. Eisenhower",
+      "alternate": ["DDE","dwight","eisenhower","ike"],
+      "birth_year": 1890,
+      "death_year": 1969,
+      "took_office": 1953,
+      "left_office": 1961,
+      "party": "Republican"
+    },
+    {
+      "number": 35,
+      "president": "John F. Kennedy",
+      "alternate": ["JFK","kennedy"],
+      "birth_year": 1917,
+      "death_year": 1963,
+      "took_office": 1961,
+      "left_office": 1963,
+      "party": "Democratic"
+    },
+    {
+      "number": 36,
+      "president": "Lyndon B. Johnson",
+      "alternate": ["LBJ","LJ","lyndon johnson","johnson"],
+      "birth_year": 1908,
+      "death_year": 1973,
+      "took_office": 1963,
+      "left_office": 1969,
+      "party": "Democratic"
+    },
+    {
+      "number": 37,
+      "president": "Richard Nixon",
+      "alternate": ["RN","nixon"],
+      "birth_year": 1913,
+      "death_year": 1994,
+      "took_office": 1969,
+      "left_office": 1974,
+      "party": "Republican"
+    },
+    {
+      "number": 38,
+      "president": "Gerald Ford",
+      "alternate": ["GF","ford"],
+      "birth_year": 1913,
+      "death_year": 2006,
+      "took_office": 1974,
+      "left_office": 1977,
+      "party": "Republican"
+    },
+    {
+      "number": 39,
+      "president": "Jimmy Carter",
+      "alternate": ["JC","carter"],
+      "birth_year": 1924,
+      "death_year": null,
+      "took_office": 1977,
+      "left_office": 1981,
+      "party": "Democratic"
+    },
+    {
+      "number": 40,
+      "president": "Ronald Reagan",
+      "alternate": ["RR","reagan"],
+      "birth_year": 1911,
+      "death_year": 2004,
+      "took_office": 1981,
+      "left_office": 1989,
+      "party": "Republican"
+    },
+    {
+      "number": 41,
+      "president": "George H. W. Bush",
+      "alternate": ["GHWB","HW","h w bush","h bush"],
+      "birth_year": 1924,
+      "death_year": 2018,
+      "took_office": 1989,
+      "left_office": 1993,
+      "party": "Republican"
+    },
+    {
+      "number": 42,
+      "president": "Bill Clinton",
+      "alternate": ["BC","clinton"],
+      "birth_year": 1946,
+      "death_year": null,
+      "took_office": 1993,
+      "left_office": 2001,
+      "party": "Democratic"
+    },
+    {
+      "number": 43,
+      "president": "George W. Bush",
+      "alternate": ["GWB","W","george bush","w bush"],
+      "birth_year": 1946,
+      "death_year": null,
+      "took_office": 2001,
+      "left_office": 2009,
+      "party": "Republican"
+    },
+    {
+      "number": 44,
+      "president": "Barack Obama",
+      "alternate": ["BO","obama"],
+      "birth_year": 1961,
+      "death_year": null,
+      "took_office": 2009,
+      "left_office": 2017,
+      "party": "Democratic"
+    },
+    {
+      "number": 45,
+      "president": "Donald J. Trump",
+      "alternate": ["DJT","DT","donald trump","trump"],
+      "birth_year": 1946,
+      "death_year": null,
+      "took_office": 2017,
+      "left_office": 2021,
+      "party": "Republican"
+    },
+    {
+      "number": 46,
+      "president": "Joseph 'Joe' Biden",
+      "alternate": ["JBi","joe biden","biden"],
+      "birth_year": 1942,
+      "death_year": null,
+      "took_office": 2021,
+      "left_office": 2025,
+      "party": "Democratic"
+    }
+  ]

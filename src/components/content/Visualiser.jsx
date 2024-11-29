@@ -1,7 +1,7 @@
 import { useState } from 'react';
 
 
-const QnA = ({answer,question,nextQuestion}) => {
+const QnA = ({question, answer, alternate, nextQuestion}) => {
     const [userAns,setUserAns] = useState("")
     const [resolved,setResolved] = useState(null);
     const [feedback, setFeedback] = useState(null);
@@ -10,13 +10,15 @@ const QnA = ({answer,question,nextQuestion}) => {
     const submitAnswer = (event) => {
         //stop page reloads
         event.preventDefault()
-        const uAnswer = document.getElementById("answerInput")
+        const uAnswer = document.getElementById("answerInput").value
         
-        //check answerInput
-        if (uAnswer.value == String(answer)){
+        //check answerInput, alternates and lowercase alternates
+        if (uAnswer == String(answer) 
+            || alternate.includes(uAnswer)
+            || alternate.includes(uAnswer.toLowerCase())){
             correct = true
             feedbackAndNextQ() 
-        } else if (uAnswer.value == "idk"){
+        } else if (uAnswer== "idk"){
             feedbackAndNextQ()
         } else {
             setResolved(false)
@@ -38,7 +40,7 @@ const QnA = ({answer,question,nextQuestion}) => {
             setResolved(false)
             setUserAns("");
             nextQuestion();
-        },1200)
+        },2000)
     }
     
     return ( 
